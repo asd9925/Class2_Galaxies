@@ -22,8 +22,15 @@ const renderer = new THREE.WebGLRenderer({ antialias: true});
 //set up over, now add things to scene
 //meshes means something 3d btw
 const geometry = new THREE.BoxGeometry(1,1,1);
+//green (sphere 1)
 const material = new THREE.MeshBasicMaterial({color: 0xff0000});
+//blue (sphere 4)
 const material2 = new THREE.MeshBasicMaterial({color: 0xff222});
+//red (sphere2)
+const material3 = new THREE.Color("rgb(255, 0, 0)");
+//pink (sphere 3)
+const material4 = new THREE.Color("rgb(232, 84, 210)");
+
 // const mesh = new THREE.Mesh(geometry, material);
 
 // //call function
@@ -81,7 +88,10 @@ function init(){
   meshes.sphere3.position.y = 2;
   scene.add(meshes.sphere3);
 
-
+  meshes.sphere4 = addSphere4Mesh();
+  meshes.sphere4.position.x = 2;
+  meshes.sphere4.position.y = 2;
+  scene.add(meshes.sphere4);
 
   //add meshes to our screen
   // scene.add(meshes.default);
@@ -115,6 +125,10 @@ function animate(){
   meshes.sphere3.position.x = Math.sin(tick * 2) *0.8;
   //move in a circle with sin and cos together
   meshes.sphere3.position.y = Math.cos(tick*2) *0.8;
+
+  //  meshes.sphere4.position.x = Math.sin(tick * 2) *3;
+  // //move in a circle with sin and cos together
+  // meshes.sphere4.position.y = Math.cos(tick*2) *3;
 
   // meshes.default.rotation.x += 0.05;
   // meshes.default2.rotation.y += 0.01;
