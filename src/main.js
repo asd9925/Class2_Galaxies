@@ -118,17 +118,17 @@ function animate(){
   //move in a circle with sin and cos together
   meshes.sphere1.position.y = Math.cos(tick * 2) *3;
 
-  meshes.sphere2.position.x = -Math.sin(tick * 2) *1.5;
+  meshes.sphere2.position.x = -Math.sin(tick * 2) *2;
   //move in a circle with sin and cos together
-  meshes.sphere2.position.y = Math.cos(tick*2) * 1.5;
+  meshes.sphere2.position.y = Math.cos(tick*2) * 2;
 
   meshes.sphere3.position.x = Math.sin(tick * 2) *0.8;
   //move in a circle with sin and cos together
   meshes.sphere3.position.y = Math.cos(tick*2) *0.8;
 
-  //  meshes.sphere4.position.x = Math.sin(tick * 2) *3;
+  //  meshes.sphere4.position.x = Math.sin(tick * 2) *0.8;
   // //move in a circle with sin and cos together
-  // meshes.sphere4.position.y = Math.cos(tick*2) *3;
+  // meshes.sphere4.position.y = Math.cos(tick*2) *0.8;
 
   // meshes.default.rotation.x += 0.05;
   // meshes.default2.rotation.y += 0.01;
