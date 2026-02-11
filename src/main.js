@@ -75,7 +75,6 @@ function init(){
   meshes.sphere1 = addSphereMesh();
   meshes.sphere1.position.x = -2;
   meshes.sphere1.position.y = -2;
-  // meshes.sphere1.scale = (2,2,2)
   scene.add(meshes.sphere1);
 
   meshes.sphere2 = addSphere2Mesh();
@@ -89,8 +88,8 @@ function init(){
   scene.add(meshes.sphere3);
 
   meshes.sphere4 = addSphere4Mesh();
-  meshes.sphere4.position.x = 2;
-  meshes.sphere4.position.y = 2;
+  meshes.sphere4.position.x = 0;
+  meshes.sphere4.position.y = 0;
   scene.add(meshes.sphere4);
 
   //add meshes to our screen
@@ -114,23 +113,29 @@ function animate(){
 
   tick += 0.01
 
-  meshes.sphere1.position.x = Math.sin(tick * 2) *3;
+  meshes.sphere1.position.x = Math.sin(tick * 2) *3.5;
   //move in a circle with sin and cos together
-  meshes.sphere1.position.y = Math.cos(tick * 2) *3;
+  meshes.sphere1.position.y = Math.cos(tick * 2) *3.5;
 
-  meshes.sphere2.position.x = -Math.sin(tick * 2) *2;
+  meshes.sphere2.position.x = -Math.sin(tick * 2) *2.5;
   //move in a circle with sin and cos together
-  meshes.sphere2.position.y = Math.cos(tick*2) * 2;
+  meshes.sphere2.position.y = Math.cos(tick*2) * 2.5;
 
-  meshes.sphere3.position.x = Math.sin(tick * 2) *0.8;
+  meshes.sphere3.position.x = Math.sin(tick * 2) *1.5;
   //move in a circle with sin and cos together
-  meshes.sphere3.position.y = Math.cos(tick*2) *0.8;
+  meshes.sphere3.position.y = Math.cos(tick*2) *1.5;
 
-  //  meshes.sphere4.position.x = Math.sin(tick * 2) *0.8;
-  // //move in a circle with sin and cos together
-  // meshes.sphere4.position.y = Math.cos(tick*2) *0.8;
+   meshes.sphere4.position.x = -Math.sin(tick * 2) *0.5;
+  //move in a circle with sin and cos together
+  meshes.sphere4.position.y = Math.cos(tick*2) *0.5;
 
   // meshes.default.rotation.x += 0.05;
   // meshes.default2.rotation.y += 0.01;
   // meshes.default3.rotation.z += 0.07;
 }
+
+
+//green (sphere 1)
+//red (sphere 2)
+//pink (sphere 3)
+//blue (sphere 4)
