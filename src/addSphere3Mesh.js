@@ -2,7 +2,7 @@ import * as THREE from 'three'
 
 export function addSphere3Mesh(){
     //choose shape
-      const sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
+      const sphereGeometry = new THREE.SphereGeometry(.1, .1, .1);
       //choose material
       const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0xff222 })
         //choose mesh

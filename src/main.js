@@ -5,6 +5,7 @@ import { addDefaultMeshes } from './addDefaultMeshes';
 import { addSphereMesh } from './addSphereMesh';
 import { addSphere2Mesh } from './addSphere2Mesh';
 import { addSphere3Mesh } from './addSphere3Mesh';
+import { addSphere4Mesh } from './addSphere4Mesh';
 
 //referencing scene in THREE library (anything with THREE prefix is refering something in the THREE library)
 //THREE.Scene
@@ -70,15 +71,17 @@ function init(){
   // meshes.sphere1.scale = (2,2,2)
   scene.add(meshes.sphere1);
 
-  meshes.sphere2 = addSphereMesh();
+  meshes.sphere2 = addSphere2Mesh();
   meshes.sphere2.position.x = 2;
   meshes.sphere2.position.y = 2;
   scene.add(meshes.sphere2);
 
-  meshes.sphere3 = addSphereMesh();
+  meshes.sphere3 = addSphere3Mesh();
   meshes.sphere3.position.x = -2;
   meshes.sphere3.position.y = 2;
   scene.add(meshes.sphere3);
+
+
 
   //add meshes to our screen
   // scene.add(meshes.default);
