@@ -2,10 +2,12 @@ import './style.css';
 import * as THREE from 'three';
 //call helper function
 import { addDefaultMeshes } from './addDefaultMeshes';
+import { addLight } from './addLight';
 import { addSphereMesh } from './addSphereMesh';
 import { addSphere2Mesh } from './addSphere2Mesh';
 import { addSphere3Mesh } from './addSphere3Mesh';
 import { addSphere4Mesh } from './addSphere4Mesh';
+
 
 //referencing scene in THREE library (anything with THREE prefix is refering something in the THREE library)
 //THREE.Scene
@@ -23,7 +25,15 @@ const renderer = new THREE.WebGLRenderer({ antialias: true});
 //meshes means something 3d btw
 const geometry = new THREE.BoxGeometry(1,1,1);
 //green (sphere 1)
-const material = new THREE.MeshBasicMaterial({color: 0xff0000});
+// const material = new THREE.MeshBasicMaterial({color: 0xff0000});
+// const sphereMaterial = new THREE.TextureLoader().load('./LavaTexture')
+const textureLoader = new THREE.TextureLoader()
+const lavaTexture = textureLoader.load('/Material_1919.jpg')
+const material = new THREE.MeshPhysicalMaterial({
+  map: lavaTexture,
+})
+
+
 //blue (sphere 4)
 const material2 = new THREE.MeshBasicMaterial({color: 0xff222});
 //red (sphere2)
@@ -45,7 +55,14 @@ const mesh = addSphereMesh();
 
 //global function, curly brackets means object (currently empty)
 const meshes = {}
+
+const lights = {}
+
 let tick = 0;
+
+//add light
+lights.default = addLight()
+scene.add(lights.default)
 
 init();
 //all setup stuff goes here
