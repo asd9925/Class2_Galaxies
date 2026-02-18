@@ -9,10 +9,19 @@ export function addSphereMesh(){
 
       // })
 
-      const sphereMaterial = new THREE.TextureLoader().load('./LavaTexture')
+      // const sphereMaterial = new THREE.TextureLoader().load('./LavaTexture')
 
       // const textureLoader = new THREE.TextureLoader()
       // const lavaTexture = textureLoader.load('/Material_1919.jpg')
+
+      const sphereMaterial = new THREE.MeshStandardMaterial({
+              color: 0x0335fc,
+              metalness: 2.0,
+              roughness: 0.35,
+              //how strong colour is emitted
+              emissive: 0x0a0a0a,
+              emissiveIntensity: 0.7,
+            })
 
         //choose mesh
       const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial)
